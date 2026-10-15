@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo-pestana">Inicio - El Fenómeno de El Niño</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #0b2545;
+            color: #fff;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            background-color: #ee6c4d;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            color: #ee6c4d;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 100px auto 40px auto;
+            padding: 0 20px;
+        }
+
+        .seccion {
+            display: none;
+            background: #fff;
+            margin-bottom: 30px;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .seccion.activa {
+            display: block;
+        }
+
+        h1, h2 {
+            color: #0b2545;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 25px;
+            border-bottom: 2px solid #eef4f8;
+            padding-bottom: 5px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .imagen-contenido {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .destacado {
+            background-color: #eef4f8;
+            border-left: 5px solid #134074;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .navegacion-interna {
+            margin-top: 40px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        .btn-regresar {
+            display: inline-block;
+            background-color: #ee6c4d;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn-regresar:hover {
+            background-color: #d45b3c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0b2545;
+            color: #fff;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de Navegación -->
+    <header>
+        <nav>
+            <div class="logo">ClimaGlobal</div>
+            <ul class="nav-links">
+                <li><a onclick="mostrarSeccion('inicio')">Inicio</a></li>
+                <li><a onclick="mostrarSeccion('lengua')">Lengua Castellana</a></li>
+                <li><a onclick="mostrarSeccion('ambiental')">Ed. Ambiental</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido -->
+    <main>
+        <!-- 1. SECCIÓN DE INICIO -->
+        <section id="inicio" class="seccion activa">
+            <h1>El Fenómeno de El Niño y El Super Niño</h1>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 20px;">Un espacio informativo para comprender los cambios climáticos extremos y sus consecuencias.</p>
+            
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1000&q=80" alt="Océano Pacífico" class="imagen-contenido">
+
+            <h2>¿Qué es el Fenómeno de El Niño?</h2>
+            <p>Es un fenómeno climático natural caracterizado por el calentamiento anormal de las aguas superficiales del Océano Pacífico central y oriental. Ocurre de manera cíclica y altera drásticamente los patrones de lluvia y temperatura a escala global.</p>
+            
+            <div class="destacado">
+                <p><strong>Dato clave:</strong> Su nombre proviene de pescadores peruanos que notaron la llegada de corrientes de aguas cálidas cerca de la época navideña, asociándolo con el "Niño Jesús".</p>
+            </div>
+
+            <h2>¿Qué es "El Super Niño"?</h2>
+            <p>Se le denomina "Super Niño" a una fase de El Niño excepcionalmente intensa y fuerte. En estos eventos, las anomalías de temperatura del agua del mar superan ampliamente los promedios históricos normales, desatando impactos climáticos mucho más severos y extremos en todo el planeta.</p>
+            
+            <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=1000&q=80" alt="Clima extremo" class="imagen-contenido">
+
+            <h2>Principales Impactos</h2>
+            <p>Las consecuencias de estos fenómenos afectan profundamente a los ecosistemas, la sociedad y la economía mundial:</p>
+            <ul>
+                <li><strong>Agricultura y Ganadería:</strong> Pérdida masiva de cosechas y escasez de alimentos debido a sequías prolongadas o lluvias excesivas.</li>
+                <li><strong>Agua y Energía:</strong> Reducción crítica en los niveles de los embalses, afectando la generación de energía hidroeléctrica y el suministro de agua potable.</li>
+                <li><strong>Salud y Ecosistemas:</strong> Incremento de incendios forestales, proliferación de enfermedades tropicales y alteración severa en la fauna marina.</li>
+            </ul>
+        </section>
+
+        <!-- 2. SECCIÓN DE LENGUA CASTELLANA -->
+        <section id="lengua" class="seccion">
+            <h1>Lengua Castellana: Análisis y Discurso sobre El Niño</h1>
+            <p>Desde el enfoque de la lengua y la comunicación, el Fenómeno de El Niño y el Super Niño no solo representan una alteración climática, sino también un tema recurrente en la literatura de crónica periodística, el ensayo científico y los medios de comunicación masiva.</p>
+
+            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1000&q=80" alt="Escritura y análisis" class="imagen-contenido">
+
+            <h2>El Tratamiento Periodístico y Literario</h2>
+            <p>Los medios de comunicación y los escritores utilizan diversas herramientas lingüísticas para describir la magnitud de estos eventos. Las crónicas periodísticas suelen emplear:</p>
+            <ul>
+                <li><strong>Metáforas y Personificación:</strong> Se describe al "Super Niño" como un monstruo invisible o un gigante alterado que sacude los océanos, facilitando la comprensión pública del fenómeno.</li>
+                <li><strong>Textos Expositivos y Argumentativos:</strong> Artículos de opinión que debaten la responsabilidad humana frente al cambio climático y la gestión gubernamental de las crisis de agua.</li>
+                <li><strong>Vocabulario Técnico Especializado:</strong> Integración correcta de términos geográficos y meteorológicos en textos formales redactados por los estudiantes.</li>
+            </ul>
+
+            <div class="destacado">
+                <p><strong>Reflexión lingüística:</strong> El análisis del discurso en torno a los desastres naturales nos enseña cómo el lenguaje construye la percepción del riesgo y moviliza a la sociedad hacia la prevención.</p>
+            </div>
+
+            <div class="navegacion-interna">
+                <a class="btn-regresar" onclick="mostrarSeccion('inicio')">← Volver al Inicio</a>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN DE EDUCACIÓN AMBIENTAL -->
+        <section id="ambiental" class="seccion">
+            <h1>Educación Ambiental: Datos Atmosféricos y Ecosistemas</h1>
+            <p>El estudio riguroso del clima requiere comprender la interacción compleja entre la atmósfera y los océanos. El Fenómeno de El Niño altera de forma directa los sistemas de presión atmosférica global.</p>
+
+            <img src="https://images.unsplash.com/photo-1590055564281-799d6d3330fc?auto=format&fit=crop&w=1000&q=80" alt="Meteorología y atmósfera" class="imagen-contenido">
+
+            <h2>Datos Atmosféricos y Mecanismo Físico</h2>
+            <p>Científicamente, El Niño forma parte del ciclo conocido como <strong>ENSO</strong> (El Niño-Oscilación del Sur):</p>
+            <ul>
+                <li><strong>Debilitamiento de los Vientos Alisios:</strong> Normalmente, los vientos soplan de este a oeste empujando el agua cálida hacia Asia. Durante El Niño, estos vientos se debilitan o invierten su dirección.</li>
+                <li><strong>Anomalías de Temperatura:</strong> En un "Super Niño", las temperaturas de la superficie del mar en el Pacífico ecuatorial pueden elevarse entre **3°C y 5°C** por encima de lo normal.</li>
+                <li><strong>Presión Atmosférica:</strong> Se produce un cambio en la presión barométrica entre Tahití y Darwin (Australia), conocido como el Índice de Oscilación del Sur (IOS).</li>
+            </ul>
+
+            <h2>Impacto Ecológico y Sostenibilidad</h2>
+            <p>Los desequilibrios atmosféricos traen consecuencias ambientales críticas:</p>
+            <ul>
+                <li><strong>Colapso de Nutrientes:</strong> Al calentarse la capa superficial, se bloquea el afloramiento de aguas profundas ricas en nutrientes (fenómeno de <em>upwelling</em>), afectando drásticamente la cadena trófica marina.</li>
+                <li><strong>Eventos Climáticos Extremos:</strong> Sequías extremas en el norte de Sudamérica y Oceanía, combinadas con inundaciones devastadoras en las costas de América del Sur.</li>
+            </ul>
+
+            <div class="navegacion-interna">
+                <a class="btn-regresar" onclick="mostrarSeccion('inicio')">← Volver al Inicio</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Proyecto Escolar Unificado</p>
+    </footer>
+
+    <!-- Script de control -->
+    <script>
+        function mostrarSeccion(idSeccion) {
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(sec => sec.classList.remove('activa'));
+
+            document.getElementById(idSeccion).classList.add('activa');
+
+            if (idSeccion === 'inicio') {
+                document.title = "Inicio - El Fenómeno de El Niño";
+            } else if (idSeccion === 'lengua') {
+                document.title = "Lengua Castellana - Proyecto Escolar";
+            } else if (idSeccion === 'ambiental') {
+                document.title = "Educación Ambiental - Proyecto Escolar";
+            }
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
